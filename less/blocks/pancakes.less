@@ -1,0 +1,317 @@
+
+.pancakes {
+    padding: 140px 0;
+    background: url(../img/background-pancakes.jpg) no-repeat 0 0;
+    background-size: cover;
+    @media @md {
+        padding: 80px 0;
+    }
+    @media @sm {
+        padding: 60px 0;
+    }
+    @media @xs {
+        padding: 0px 0;
+    }
+}
+//слайдер
+.pancakes-slider {
+    display: block;
+    width: 1060px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    @media @md {
+        width: 990px;
+    }
+    @media @sm {
+        width: 750px;
+        height: 600px;
+    }
+    @media @xs {
+        height: 700px;
+        width: 100%;
+    }
+}
+.slider-wrapper {
+    // отступы чтобы было видно блок ready in, 
+    //который скрывает слайдер
+    .slider-slide {
+        margin-right: 100px;
+        margin-top: 45px;
+        @media @xs {
+            width: 100%;
+            margin-right: 0px;
+            margin-top: 45px;
+        }
+    }
+}
+.slider-slide {
+    outline: none;
+}
+.pancakes-image {
+    display: inline-block;
+    position: relative;
+    height: 500px;
+    width: 44%;
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+    //изображение на весь блок
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    @media @sm {
+        height: 600px;
+    }
+    @media @xs {
+        width: 100%;
+        height: 300px;
+    }
+}
+.star-wrap {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translatey(-50%);
+}
+.star {
+    display: block;
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    &--full {
+        background: url(../img/Star-full.png) 50% 50%;
+    }
+    &--empty {
+        background: url(../img/Star.png) 50% 50%;
+    }
+}
+.pancakes-button {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    z-index: 1111;
+    transform: translatey(-50%);
+    width: 50px;
+    height: 50px;
+    padding: 15px 0;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    &.active {
+        border: 1px solid black;
+    }
+    .line {
+        display: inline-block;
+        margin-left: 1px;
+        height: 20px;
+        background: #d8bba3;
+        width: 2px;
+        transition: all 1s;
+        &.active:nth-child(1) {
+            transform: rotate(495deg);
+            display: block;
+            margin-top: 0px;
+            margin-left: 24px;
+        }
+        &.active:nth-child(2) {
+            display: none;
+        }
+        &.active:nth-child(3) {
+            transform: rotate(405deg);
+            display: block;
+            margin-top: -20px;
+            margin-left: 24px;
+        }
+    }
+}
+.pancakes-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-right: 1px solid black;
+    background: white;
+    text-align: center;
+    &__title {
+        color: #56534c;
+        padding-top: 30px;
+        font-size: 35px;
+        text-transform: uppercase;
+        padding-bottom: 150px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-family: 'Alegreya', sans-serif;
+        @media @xs {
+            padding-bottom: 20px;
+        }
+    }
+    &__button {
+        border: 1px dashed #9e9c93;
+        padding: 20px 50px;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
+        letter-spacing: 5px;
+        &:hover {
+            text-decoration: underline;
+        }
+        @media @xs {
+            padding: 10px 20px;
+        }
+    }
+}
+.pancakes-info {
+    display: inline-block;
+    position: relative;
+    height: 500px;
+    width: 55%;
+    margin-left: -3px;
+    padding: 80px 80px 80px 60px;
+    vertical-align: top;
+    background: white;
+    &__title {
+        font-size: 48px;
+        line-height: 36px;
+        font-family: "AlegreyaBold";
+        color: #56534c;
+        span {
+            font-size: 14px;
+            color: #a47d5e;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
+    &__text {
+        margin-top: 70px;
+        font-size: 14px;
+        line-height: 24px;
+        font-family: "ProximaNova";
+        color: #56534c;
+        @media @xs {
+            margin-top: 10px;
+        }
+    }
+    @media @sm {
+        height: 600px;
+    }
+    @media @xs {
+        width: 100%;
+        height: 600px;
+        padding: 20px;
+        margin-left: 0;
+    }
+}
+//блок ready in с абсолютным расположением
+.pancakes-ready {
+    position: absolute;
+    background-image: url(../img/ready-in-background.png);
+    top: -45px;
+    right: -100px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 5px 5px 20px 7px rgba(105, 80, 58, 0.45);
+    font-size: 18px;
+    line-height: 30px;
+    font-family: "AlegreyaBold";
+    color: #a47d5e;
+    text-transform: uppercase;
+    text-align: center;
+    &__times {
+        display: block;
+        margin-top: 40px;
+        font-size: 92px;
+        color: #dfc691;
+        letter-spacing: 2px;
+    }
+    &__minutes {
+        display: block;
+        margin-top: 20px;
+        text-transform: none;
+        color: #979285;
+    }
+    @media @xs {
+        display: none;
+    }
+}
+.gallery-thumbs {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 47%;
+    width: 40%;
+    height: 100px;
+    z-index: 111;
+    @media @xs {
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+.slider-wrapper-thumbs {
+    width: 70%;
+}
+.slick-slider .slick-list {
+    padding: 0 !important;
+}
+.slider-wrapper-thumbs .slider-slide {
+    display: inline-block;
+    img {
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+    }
+}
+.slider-button-prev,
+.slider-button-next {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    &:hover {
+        border: 1px solid #d8bba3;
+        &:before {
+            border-left: 1px solid #d8bba3;
+            border-bottom: 1px solid #d8bba3;
+        }
+    }
+    &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 10px;
+        height: 10px;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        transform: rotate(45deg);
+    }
+}
+.slider-button-prev {
+    margin-right: 10px;
+}
+.slider-button-next {
+    &:before {
+        left: 8px;
+        transform: rotate(-135deg);
+    }
+}

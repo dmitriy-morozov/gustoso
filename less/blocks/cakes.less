@@ -1,0 +1,128 @@
+
+.cakes {
+    .container-fluid();
+}
+.cakes-wrap {
+    padding: 100px 0;
+    @media @md {
+        padding: 80px 0;
+    }
+    @media @sm {
+        padding: 60px 0;
+    }
+    @media @xs {
+        padding: 30px 0;
+    }
+}
+.cakes-info {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+    text-align: center;
+    padding: 0 80px;
+    &__title {
+        font-size: 48px;
+        line-height: 30px;
+        font-family: "AlegreyaBold";
+        color: #56534c;
+        span {
+            font-size: 14px;
+            color: #a47d5e;
+            text-transform: uppercase;
+        }
+    }
+    &__text {
+        margin-top: 70px;
+        font-size: 14px;
+        line-height: 24px;
+        font-family: "ProximaNova";
+        color: #56534c;
+    }
+    @media @sm {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+.chef {
+    margin-top: 50px;
+    vertical-align: middle;
+    font-size: 24px;
+    line-height: 30px;
+    color: #56534c;
+    &__title {
+        font-family: "AlegreyaBold";
+    }
+    &__name {
+        vertical-align: middle;
+        font-size: 14px;
+        line-height: 24px;
+        font-family: "ProximaNova";
+        color: #56534c;
+        span {
+            padding: 15px;
+            border-top: 1px solid #d7d5ca;
+            border-bottom: 1px solid #d7d5ca;
+        }
+        img {
+            margin: 0 20px;
+            vertical-align: middle;
+            @media @md {
+                margin: 0;
+            }
+        }
+    }
+    &__cite {
+        position: relative;
+        font-family: "SCRIPTIN";
+        color: #a47d5e;
+        padding: 0 50px;
+        span {
+            position: absolute;
+            font-size: 60px;
+            color: #b5b4b0;
+            font-family: "Times New Roman";
+        }
+        .quote-first {
+            top: 0px;
+            left: 0px;
+        }
+        .quote-last {
+            bottom: -40px;
+            right: 0px;
+        }
+    }
+}
+.cakes-tastes {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    vertical-align: top;
+    &__item {
+        display: inline-block;
+        width: 47%;
+        &:nth-child(2) {
+            margin-bottom: 20px;
+            margin-left: 20px;
+            @media @xs {
+                margin: 0;
+            }
+        }
+        &:nth-child(3) {
+            margin-right: 20px;
+            @media @xs {
+                margin: 0;
+            }
+        }
+    }
+    &__badge {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        filter: drop-shadow(14px 14px 18px #3b251d);
+    }
+    @media @sm {
+        width: 100%;
+    }
+}
