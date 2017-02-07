@@ -1,5 +1,5 @@
 #Лэндинг Gustoso
-# [dmitriy-morozov.github.io/look](https://dmitriy-morozov.github.io/gustoso/)
+# [dmitriy-morozov.github.io/gustoso](https://dmitriy-morozov.github.io/gustoso/)
 
 ###Особенности проекта:
 * HTML5, CSS3, JQUERY;
