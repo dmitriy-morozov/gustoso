@@ -1,4 +1,4 @@
-#Лэндинг Gustoso
+#Лендинг Gustoso
 # [dmitriy-morozov.github.io/gustoso](https://dmitriy-morozov.github.io/gustoso/)
 
 ###Особенности проекта:
